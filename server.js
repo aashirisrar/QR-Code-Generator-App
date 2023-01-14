@@ -8,7 +8,7 @@ app.get("/generate", (req, res) => {
   const options = {
     method: "GET",
     url: "https://qr-code-by-api-ninjas.p.rapidapi.com/v1/qrcode",
-    params: { data: req.query.entry, format: "png" },
+    params: { data: req.query.entry, format: "png", size: "500" },
     headers: {
       "X-RapidAPI-Key": "b8eb4c64d1msh82f4f5538e5065ap1d2b92jsn7113e96b5efb",
       "X-RapidAPI-Host": "qr-code-by-api-ninjas.p.rapidapi.com",

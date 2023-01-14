@@ -13,7 +13,7 @@
         integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous" />
 
 
-    <title>Hello, world!</title>
+    <title>QR Code Generator App</title>
 </head>
 
 <body>
@@ -51,9 +51,9 @@
             <button id="submit" type=" submit" class="btn btn-primary">Submit</button>
         </form>
 
-        <h2 class="mt-4">Results</h2>
+        <h2 class="mt-2">Results</h2>
 
-        <div id="result">
+        <div id="result" class="text-center">
         </div>
 
     </main>
@@ -78,12 +78,10 @@
             r.then((response) => {
                 return response.json();
             }).then((resp) => {
-                console.log(resp);
                 let html = [
                     '<img src=data:image/png;base64,' + resp + '>',
                 ];
                 document.getElementById("result").innerHTML = html;
-                return resp;
             });
         });
     </script>
